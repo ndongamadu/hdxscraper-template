@@ -20,7 +20,9 @@ def main():
     """Generate dataset and create it in HDX"""
 
     base_url = Configuration.read()['base_url']
-    downloader = Download(basicauthfile=join(expanduser("~"), '.mykey'))
+    # If website being scraped requires username and password, you can supply one in a file in your home directory.
+    # The file should contain username:password based64 encoded.
+    downloader = Download(basicauthfile=join(expanduser("~"), '.scrapernamefile'))
     countriesdata = get_countriesdata(base_url, downloader)
     logger.info('Number of datasets to upload: %d' % len(countriesdata))
     for countrydata in countriesdata:
