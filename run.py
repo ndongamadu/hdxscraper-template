@@ -25,7 +25,7 @@ def main():
 
     base_url = Configuration.read()['base_url']
     # If website being scraped requires username and password, you can supply one in a file in your home directory.
-    # The file should contain username:password based64 encoded.
+    # The file should contain username:password based64 encoded. Remember to create it on the ScraperWiki box!
     downloader = Download(basicauthfile=join(expanduser("~"), '.scrapernamefile'))
     countriesdata = get_countriesdata(base_url, downloader)
     logger.info('Number of datasets to upload: %d' % len(countriesdata))
@@ -38,5 +38,7 @@ def main():
             showcase.add_dataset(dataset)
 
 if __name__ == '__main__':
+    # Remember to create .hdxkey on the ScraperWiki box!
+    # It is best to use the HDX Data Team bot's key (https://data.humdata.org/user/luiscape) rather than your own.
     facade(main, hdx_site='test', project_config_yaml=join('config', 'project_configuration.yml'))
 
