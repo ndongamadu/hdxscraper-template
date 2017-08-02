@@ -26,7 +26,8 @@ def main():
     base_url = Configuration.read()['base_url']
     # If website being scraped requires username and password, you can supply one in a file in your home directory.
     # The file should contain username:password based64 encoded. Remember to create it on the ScraperWiki box!
-    downloader = Download(basicauthfile=join(expanduser("~"), '.scrapernamefile'))
+    downloader = Download(basic_auth_file=join(expanduser("~"), '.scrapernamefile'),
+                          extra_params_yaml=join(expanduser("~"), 'scrapernamefile.yml')
     countriesdata = get_countriesdata(base_url, downloader)
     logger.info('Number of datasets to upload: %d' % len(countriesdata))
     for countrydata in countriesdata:
