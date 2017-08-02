@@ -12,9 +12,10 @@ from hdx.utilities.downloader import Download
 
 from scrapername import generate_dataset_and_showcase, get_countriesdata
 
+# Remove 2 lines below if you don't want emails when there are errors
 from hdx.facades import logging_kwargs
-# Remove line below if you don't want emails when there are errors
 logging_kwargs['smtp_config_yaml'] = join('config', 'smtp_configuration.yml')
+
 from hdx.facades.hdx_scraperwiki import facade
 
 logger = logging.getLogger(__name__)
