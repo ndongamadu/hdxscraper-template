@@ -25,7 +25,7 @@ def get_countriesdata(base_url, downloader):
     return jsonresponse['countries_key']
 
 
-def generate_dataset_and_showcase(downloader, countrydata):
+def generate_dataset_and_showcase(base_url, downloader, countrydata):
     """Parse json of the form:
     {
     },
