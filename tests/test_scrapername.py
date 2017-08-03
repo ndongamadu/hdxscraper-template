@@ -11,7 +11,7 @@ from hdx.hdx_configuration import Configuration
 from scrapername import generate_dataset_and_showcase, get_countriesdata
 
 
-class TestWorldPop:
+class TestScraperName:
     countrydata = {...}
 
     @pytest.fixture(scope='function')
@@ -31,17 +31,17 @@ class TestWorldPop:
                 response = Response()
                 if url == 'http://xxx':
                     def fn():
-                        return {'key': [TestWorldPop.countrydata]}
+                        return {'key': [TestScraperName.countrydata]}
                     response.json = fn
                 return response
         return Download()
 
     def test_get_countriesdata(self, downloader):
         countriesdata = get_countriesdata('http://xxx/', downloader)
-        assert countriesdata == [TestWorldPop.countrydata]
+        assert countriesdata == [TestScraperName.countrydata]
 
     def test_generate_dataset_and_showcase(self, configuration, downloader):
-        dataset, showcase = generate_dataset_and_showcase(downloader, TestWorldPop.countrydata)
+        dataset, showcase = generate_dataset_and_showcase(downloader, TestScraperName.countrydata)
         assert dataset == {...}
 
         resources = dataset.get_resources()
