@@ -6,6 +6,15 @@ Look for xxx and ... and replace add text accordingly.
 
 Collector designed to collect ScraperName datasets from the [ScraperName](http://) website.
 
+For full scrapers following this template see:
+[ACLED](https://github.com/OCHA-DAP/hdxscraper-acled-africa),
+[FTS](https://github.com/OCHA-DAP/hdxscraper-fts),
+[IDMC](https://github.com/OCHA-DAP/hdxscraper-idmc),
+[WHO](https://github.com/OCHA-DAP/hdxscraper-who),
+[World Bank](https://github.com/OCHA-DAP/hdxscraper-worldbank),
+[WorldPop](https://github.com/OCHA-DAP/hdxscraper-worldpop)
+
+
 ### Collector for ScraperName's Datasets
 [![Build Status](https://travis-ci.org/OCHA-DAP/hdxscraper-scrapername.svg?branch=master&ts=1)](https://travis-ci.org/OCHA-DAP/hdxscraper-scrapername) [![Coverage Status](https://coveralls.io/repos/github/OCHA-DAP/hdxscraper-scrapername/badge.svg?branch=master&ts=1)](https://coveralls.io/github/OCHA-DAP/hdxscraper-scrapername?branch=master)
 
