@@ -39,6 +39,8 @@ def generate_dataset_and_showcase(base_url, downloader, countrydata):
         'title': title,
         ...
     })
+    dataset.set_maintainer()
+    dataset.set_organization()
     dataset.set_dataset_date()
     dataset.set_expected_update_frequency()
     dataset.add_country_location()
