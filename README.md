@@ -4,6 +4,9 @@ Replace scrapername everywhere with your scraper's name eg. worldbank
 Replace ScraperName everywhere with your scraper's name eg. World Bank
 Look for xxx and ... and replace add text accordingly.
 
+Scrapers can be installed on QuickCode and set up to run on a schedule 
+using the command in the file "crontab".
+
 Collector designed to collect ScraperName datasets from the [ScraperName](http://) website.
 
 For full scrapers following this template see:
