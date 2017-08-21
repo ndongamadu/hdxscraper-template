@@ -8,6 +8,6 @@ package_creator: "Amadou"
 private: False  # has to be True or False
 maintainer: "tcrevoisier"
 notes: "This dataset is an extraction of roads from OpenStreetMap data made by WFP following UNSDI-T standards.The data is updated in near-real time from OSM servers and include all latest updates."
-dataset_source: "wfp"
+dataset_source: "OpenStreetMap"
 author: "wfp"
 state: "active"

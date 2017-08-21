@@ -42,7 +42,7 @@ def generate_dataset_and_showcase(country, countryISO3):
     mainRoadsResource['name'] = title
     mainRoadsResource['format'] = 'zipped shapefile'
     mainRoadsResource['url_type'] = 'api'
-    mainRoadsResource['url'] = 'http://ogcserver.gis.wfp.org/geoserver/ows?format_options=charset:UTF-8&typename=geonode:'+countryISO3+'_trs_roads_osm&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature&hdx=hdx'
+    mainRoadsResource['url'] = 'http://ogcserver.gis.wfp.org/geoserver/ows?format_options=charset:UTF-8&typename=geonode:'+countryISO3.lower()+'_trs_roads_osm&outputFormat=SHAPE-ZIP&version=1.0.0&service=WFS&request=GetFeature&hdx=hdx'
     mainRoadsResource['description'] = 'Datasets contains : primary, secondary and tertiary roads'
 
     dataset.add_update_resource(mainRoadsResource)
@@ -51,8 +51,8 @@ def generate_dataset_and_showcase(country, countryISO3):
         'name': '%s-showcase' % slugified_name,
         'title': country.capitalize(),
         'notes': 'WFP Geonode',
-        'url': 'https://geonode.wfp.org/layers/ogcserver.gis.wfp.org%3Ageonode%3A'+countryISO3+'_trs_roads_osm',
-        'image_url': ' '
+        'url': 'https://geonode.wfp.org/layers/ogcserver.gis.wfp.org%3Ageonode%3A'+countryISO3.lower()+'_trs_roads_osm',
+        'image_url': 'https://test-data.humdata.org/dataset/mauritanie-road-network-main-roads'
     })
     #showcase.add_tags([])
     print('==== dataset generated ====')
