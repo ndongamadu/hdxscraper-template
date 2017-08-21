@@ -1,8 +1,13 @@
-license_id: eg. "cc-by-igo"
-subnational: eg. 1  # has to be 0 or 1
-notes: eg. "Contains data from World Health Organization's [data portal](http://www.who.int/gho/en/) covering various indicators (one per resource)."
-caveats: eg. "More details about the indicators are available in the links in the resource descriptions."
-methodology: eg. "Registry"
-dataset_source: eg. "World Health Organization"
-package_creator: eg. "mcarans"
-private: eg. False  # has to be True or False
+owner_org: "wfp"
+author: "WFP - World Food Programme"
+license_id: "ODbL"
+subnational: 1
+caveats: "This dataset is used as COD by OCHA ROWCA and partners in the region."
+methodology: "This dataset is an extract of OSM and updated every hour. It uses OSM tags that match corresponding attributes of the WFP data structure (UNSDI-T) and the values of the tags are used as is."
+package_creator: "Amadou"
+private: False  # has to be True or False
+maintainer: "tcrevoisier"
+notes: "This dataset is an extraction of roads from OpenStreetMap data made by WFP following UNSDI-T standards.The data is updated in near-real time from OSM servers and include all latest updates."
+dataset_source: "wfp"
+author: "wfp"
+state: "active"
