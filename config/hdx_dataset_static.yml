@@ -2,7 +2,7 @@ owner_org: "wfp"
 author: "WFP - World Food Programme"
 license_id: "ODbL"
 subnational: 1
-caveats: "This dataset is used as COD by OCHA ROWCA and partners in the region."
+caveats: "This dataset was endorsed by the IMWG on August 03/08/2017 as the roads dataset that working group members will use."
 methodology: "This dataset is an extract of OSM and updated every hour. It uses OSM tags that match corresponding attributes of the WFP data structure (UNSDI-T) and the values of the tags are used as is."
 package_creator: "Amadou"
 private: False  # has to be True or False
