@@ -29,12 +29,14 @@ def main():
         for row in reader :
             pays = row[0]
             iso = row[1]
+            if (iso=='CIV'):
+                pays='Ivory Coast'
             dataset, showcase = generate_dataset_and_showcase(pays, iso)
             dataset.update_from_yaml()
             dataset.add_country_location(iso)
 
-            dataset.add_tags([iso,'OPENSTREETMAP','ROADS', 'UNSDIT'])
-            showcase.add_tags([iso,'OPENSTREETMAP','ROADS', 'UNSDIT'])
+            dataset.add_tags([pays,'OPENSTREETMAP','ROADS', 'UNSDIT'])
+            showcase.add_tags([pays,'OPENSTREETMAP','ROADS', 'UNSDIT'])
 
             dataset.create_in_hdx()
             showcase.create_in_hdx()
