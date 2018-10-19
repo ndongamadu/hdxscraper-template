@@ -12,9 +12,7 @@ import logging
 
 from hdx.data.dataset import Dataset
 from hdx.data.resource import Resource
-from hdx.data.hdxobject import HDXError
 from hdx.data.showcase import Showcase
-from hdx.utilities.location import Location
 from slugify import slugify
 import time
 
@@ -38,7 +36,7 @@ def generate_dataset_and_showcase(country, countryISO3):
 
     datex = time.strftime("%x")
     dataset.set_dataset_date(datex)
-    dataset.set_expected_update_frequency('Every day')
+    dataset.set_expected_update_frequency('Live')
 
     mainRoadsResource = Resource()
     mainRoadsResource['name'] = country.capitalize() + ' main roads'
